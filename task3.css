@@ -1,0 +1,63 @@
+html, body 
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    background-color: brown;
+}
+
+#app_cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width:100px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50px;
+    transform: translateY(-50%);
+}
+
+#toggle_checkbox{
+    display: none;
+}
+
+#toggle_bar
+{
+    display: block;
+    height: 100%;
+    cursor: pointer;
+}
+
+#toggle_bar:before{
+
+    content:"";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 34px;
+    height: 34px;
+    background-color: brown;
+    border-radius:50px;
+    transition: 0.3s ease width, left 0.3s ease, margin-left 0.3s ease;
+}
+
+#toggle_bar:active:before
+{
+    width: 66px;
+}
+
+#toggle_checkbox:checked + #toggle_bar:before
+{
+    left:58px;
+}
+
+#toggle_checkbox:checked:active + #toggle_bar:before 
+{
+    margin-left: -32px;
+}
