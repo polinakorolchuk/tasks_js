@@ -32,6 +32,8 @@ body
     display: block;
     height: 100%;
     cursor: pointer;
+    color: brown;
+    font-size: 1px;
 }
 
 #toggle_bar:before{
